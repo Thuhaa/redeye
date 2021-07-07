@@ -26,7 +26,7 @@ SECRET_KEY = os.environ["SECRET_KEY_REFM"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['ab537ccc0c75.ngrok.io', 'localhost']
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS","127.0.0.1,localhost").split(",")
 
 
 # Application definition
