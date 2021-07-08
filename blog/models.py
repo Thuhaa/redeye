@@ -75,7 +75,7 @@ class AdminUser(AbstractBaseUser):
 CATEGORY_CHOICES = (('Bud Solutionz','Bud Solutionz'),('Lifestyle','Lifestyle'),('Music','Music'))
 class Article(models.Model):
 	title = models.CharField(max_length=50)
-	image = models.ImageField(upload_to='blog-images/', null=True)
+	image = models.ImageField(upload_to='blog-images/')
 	text = models.TextField()
 	featured = models.BooleanField(default=False)
 	date = models.DateTimeField(auto_now=True)
