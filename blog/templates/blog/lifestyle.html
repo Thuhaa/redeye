@@ -7,10 +7,10 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Lifestyle</title>
-    <link rel="stylesheet" href="{% static 'blog/css/nicepage.css' %}" media="screen">
-    <link type="text/css" href="{% static 'blog/css/post-template.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'blog/css/updated_nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'blog/css/updated_blog_template.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'blog/js/jquery.js' %}" defer=""></script>
-    <script class="u-script" type="text/javascript" src="{% static 'blog/js/nicepage.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'blog/js/updated_nicepage.js' %}" defer=""></script>
     <meta name="generator" content="Nicepage 3.11.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     
@@ -75,26 +75,26 @@
         </nav>
       </div></header>
     <section class="u-clearfix u-section-1" id="sec-ef3c">
+      
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
+        
         <div class="u-blog u-expanded-width u-repeater u-repeater-1"><!--blog_post-->
-          {% for blog in articles %}
-          <div class="u-blog-post u-container-style u-repeater-item u-white u-repeater-item-1">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><!--blog_post_header-->
-              <h4 class="u-blog-control u-text u-text-1">
-                <a class="u-post-header-link" href="{% url 'detail' blog.slug %}"><!--blog_post_header_content-->{{ blog.title }}<!--/blog_post_header_content--></a>
+          {% for article in articles %}
+          <div class="u-blog-post u-container-style u-repeater-item u-video-cover u-white">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><!--blog_post_header-->
+              <h4 class="u-blog-control u-text u-text-3">
+                <a class="u-post-header-link" href="../blog/post-1.html"><!--blog_post_header_content-->{{ article.title }}<!--/blog_post_header_content--></a>
               </h4><!--/blog_post_header--><!--blog_post_image-->
-              <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-2" src="{{ blog.image.url }}">
-              <div class="u-blog-control u-post-content u-text u-text-2 fr-view">{{ blog.summary }}</div><!--/blog_post_content--><!--blog_post_readmore-->
-              <a href="{% url 'detail' blog.slug %}" class="u-blog-control u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-none u-btn-1"><!--blog_post_readmore_content-->Read More<!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
+              <img src="{{ article.image.url }}">
+              <div class="u-blog-control u-post-content u-text u-text-4 fr-view">{{ article.summary }}</div><!--/blog_post_content--><!--blog_post_readmore-->
+              <a href="{% url 'detail' article.slug %}" class="u-blog-control u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-none u-btn-2"><!--blog_post_readmore_content-->Read More<!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
             </div>
           </div>
           {% endfor %}
-          <!--/blog_post--><!--blog_post-->
-          <!--/blog_post--><!--blog_post-->
-          <!--/blog_post-->
         </div><!--/blog-->
+        
       </div>
-    </section>
+          </section>
     <section class="u-clearfix u-section-2" id="sec-d912">
       <div class="u-clearfix u-sheet u-sheet-1"></div>
     </section>
@@ -125,7 +125,7 @@
     <section class="u-backlink u-clearfix u-grey-80">
       <a class="u-link" href="{% url 'homepage' %}" target="_blank">
         <span>Red Eye FM</span>
-      </a>
+      </a> 
     </section>
   
 </body></html>
